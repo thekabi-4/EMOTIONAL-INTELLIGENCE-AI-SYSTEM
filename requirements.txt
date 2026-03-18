@@ -1,0 +1,22 @@
+﻿# requirements.txt
+# Core Data Processing
+pandas
+numpy
+
+# Machine Learning
+scikit-learn
+xgboost
+lightgbm
+
+# Text Processing
+vaderSentiment
+textblob
+
+# Visualization
+matplotlib
+seaborn
+
+# Utilities
+jupyter
+joblib
+scipy
