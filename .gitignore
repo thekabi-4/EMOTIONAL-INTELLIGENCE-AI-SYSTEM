@@ -4,13 +4,6 @@ venv/
 env/
 .env/
 
-# Python cache and bytecode
-__pycache__/
-*.py[cod]
-*$py.class
-*.pyo
-.Python
-
 # Installed packages
 *.egg-info/
 *.egg
@@ -26,58 +19,3 @@ __pycache__/
 .pydevproject
 .settings/
 
-# Jupyter notebooks
-.ipynb_checkpoints/
-
-# Data files (if large or sensitive)
-data/raw/
-data/processed/
-*.h5
-*.pkl
-
-# Model artifacts
-models/*.pkl
-models/*.h5
-models/*.pt
-models/*.pth
-models/*.joblib
-models/*
-
-# Output files
-outputs/
-*.log
-*.csv
-
-# OS files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# Distribution / packaging
-dist/
-build/
-*.manifest
-*.spec
-
-# Unit test / coverage
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Local configuration
-config.local.json
-*.local
