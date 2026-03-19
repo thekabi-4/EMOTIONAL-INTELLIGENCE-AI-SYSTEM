@@ -1,3 +1,7 @@
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 import pandas as pd     
 import matplotlib.pyplot as plt
 
@@ -22,3 +26,5 @@ print(f"\nDistribution of emotional states")
 for state, count in state_counts.items():
     pct= round (count/len(df)*100,1)
     print(f"{state}: {count} samples ({pct}%)")
+
+

@@ -1,0 +1,11 @@
+sample_id,actual_emotion,predicted_emotion,actual_intensity,predicted_intensity,confidence
+1,calm,focused,5,3,0.42179403535038795
+2,overwhelmed,overwhelmed,4,3,0.5793983773334958
+3,restless,restless,4,4,0.826245748948304
+4,mixed,mixed,4,3,0.966627457838593
+5,overwhelmed,restless,4,4,0.4755404853348686
+6,focused,neutral,3,3,0.5005044831632963
+7,focused,focused,4,4,0.5627642451985874
+8,focused,focused,2,2,0.4268512063446505
+9,calm,restless,4,3,0.28844877485560994
+10,overwhelmed,focused,2,3,0.405061104883035

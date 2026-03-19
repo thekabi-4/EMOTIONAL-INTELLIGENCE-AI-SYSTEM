@@ -1,3 +1,7 @@
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -29,3 +33,5 @@ for col in cols_for_correlation:
         strength = "strong" if abs(corr_val) > 0.5 else "moderate" if abs(corr_val) > 0.3 else "weak"
         direction = "positive" if corr_val > 0 else "negative"
         print(f"   {col}: {corr_val:.3f} ({strength} {direction})")
+
+

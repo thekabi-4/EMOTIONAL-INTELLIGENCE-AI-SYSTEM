@@ -1,3 +1,7 @@
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -35,3 +39,5 @@ print(f"Characters min : {df['char_cont'].min()}")
 print(f"Words min : {df['word_cont'].min()}")   
 print(f"Characters max : {df['char_cont'].max()}")
 print(f"Words max : {df['word_cont'].max()}")
+
+

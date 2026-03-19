@@ -1,7 +1,19 @@
-import pandas as pd 
+# src/text_quality.py
+"""
+Text Quality Module
+Purpose: Evaluate the quality of text data
+"""
+
+import pandas as pd
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 
 class TextQuality:
     """Class for evaluating the quality of text data."""
+
     def __init__(self):
         self.ambiguity_words = {
             'maybe', 'perhaps', 'unsure', 'uncertain', 'kinda', 'sorta',
@@ -28,7 +40,7 @@ class TextQuality:
                 'emotion_word_count': 0,
                 'complexity_score': 0.0
             }
-        
+
         text = str(text).lower()
         words = text.split()
 
@@ -39,7 +51,7 @@ class TextQuality:
                 'emotion_word_count': 0,
                 'complexity_score': 0.0
             }
-        
+
         ambiguity_count = sum(1 for word in words if word in self.ambiguity_words)
         coherence_count = sum(1 for word in words if word in self.coherence_words)
         emotion_count = sum(1 for word in words if word in self.emotion_words)
@@ -54,43 +66,44 @@ class TextQuality:
             'complexity_score': round(complexity_score, 3),
             'emotion_word_count': emotion_count
         }
-    
-    def process_columns(self, df, column_name = 'cleaned_text'):
+
+    def process_columns(self, df, column_name='cleaned_text'):
         """Process the specified column in the DataFrame and add quality metrics."""
         print(f"Calculating quality metrics for {column_name}...")
-        
+
         # Get metrics for each row
         metrics = df[column_name].apply(self.quality_metrics).apply(pd.Series)
-        
+
         # Add to DataFrame
         df = pd.concat([df, metrics], axis=1)
-        
-        print(f"✅ Processed {len(df)} text entries")
+
+        print(f"Processed {len(df)} text entries")
         print(f"   Avg ambiguity: {metrics['ambiguity_score'].mean():.3f}")
         print(f"   Avg coherence: {metrics['coherence_score'].mean():.3f}")
         print(f"   Avg complexity: {metrics['complexity_score'].mean():.3f}")
         print(f"   Avg emotion words: {metrics['emotion_word_count'].mean():.2f}")
-        
+
         return df
+
 
 if __name__ == "__main__":
     df = pd.read_csv('data/train_data.csv')
-    
+
     # First clean the text
     from text_cleaner import TextCleaner
     cleaner = TextCleaner()
     df = cleaner.process_columns(df)
-    
+
     # Then analyze sentiment
     from sentiment_analyzer import SentimentAnalyzer
     sentiment = SentimentAnalyzer()
     df = sentiment.process_columns(df)
-    
+
     # Then calculate quality metrics
     quality = TextQuality()
     df = quality.process_columns(df)
-    
-    print("\n📋 Sample quality metrics:")
+
+    print("\nSample quality metrics:")
     for i in range(3):
         print(f"\n{i+1}. Text: {df['cleaned_text'].iloc[i][:80]}...")
         print(f"   Ambiguity: {df['ambiguity_score'].iloc[i]:.3f}")

@@ -1,0 +1,2 @@
+classifier,regressor,combined,test_size
+"{'accuracy': 0.2875, 'baseline': 0.16666666666666666, 'improvement': 0.12083333333333332}","{'mae': 0.7657862749558999, 'rmse': np.float64(0.9900602482463849), 'r2': 0.5123918836430885, 'exact_match': np.float64(0.42916666666666664)}",{'both_correct': np.float64(0.1375)},240

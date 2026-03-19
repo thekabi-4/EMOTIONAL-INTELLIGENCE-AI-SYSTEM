@@ -1,3 +1,7 @@
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -29,3 +33,6 @@ for col in numerical_cols:
     print(f' max of {col}: {df[col].max()}')
     print (f' number of unique values in {col}: {df[col].nunique()}')
     print(f' number of missing values in {col}: {df[col].isnull().sum()}')
+
+
+
