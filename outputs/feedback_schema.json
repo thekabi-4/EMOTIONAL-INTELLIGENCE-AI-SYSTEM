@@ -1,0 +1,64 @@
+{
+  "required_fields": [
+    "feedback_id",
+    "timestamp",
+    "user_id",
+    "emotion_predicted",
+    "emotion_confidence",
+    "intensity_predicted",
+    "recommendation",
+    "urgency_level",
+    "confidence_level"
+  ],
+  "optional_fields": [
+    "time_of_day",
+    "ambience_type",
+    "recommendation_detail",
+    "suggested_duration",
+    "user_followed",
+    "outcome_rating",
+    "user_notes"
+  ],
+  "field_types": {
+    "feedback_id": "<class 'str'>",
+    "timestamp": "<class 'str'>",
+    "user_id": "<class 'str'>",
+    "emotion_predicted": "<class 'str'>",
+    "emotion_confidence": "<class 'float'>",
+    "intensity_predicted": "<class 'int'>",
+    "recommendation": "<class 'str'>",
+    "urgency_level": "<class 'int'>",
+    "confidence_level": "<class 'str'>",
+    "time_of_day": "typing.Optional[str]",
+    "ambience_type": "typing.Optional[str]",
+    "recommendation_detail": "typing.Optional[str]",
+    "suggested_duration": "typing.Optional[str]",
+    "user_followed": "typing.Optional[bool]",
+    "outcome_rating": "typing.Optional[int]",
+    "user_notes": "typing.Optional[str]",
+    "model_version": "<class 'str'>",
+    "feature_count": "<class 'int'>"
+  },
+  "valid_values": {
+    "emotions": [
+      "calm",
+      "focused",
+      "mixed",
+      "neutral",
+      "overwhelmed",
+      "restless"
+    ],
+    "urgency_levels": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence_levels": [
+      "low",
+      "medium",
+      "high"
+    ]
+  }
+}

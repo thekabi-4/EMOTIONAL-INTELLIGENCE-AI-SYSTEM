@@ -1,0 +1,4 @@
+feedback_id,timestamp,user_id,emotion_predicted,emotion_confidence,intensity_predicted,recommendation,urgency_level,confidence_level,time_of_day,ambience_type,recommendation_detail,suggested_duration,user_followed,outcome_rating,user_notes,model_version,feature_count
+fb_342586dc,2026-03-23T12:08:28.466458,user_001,overwhelmed,0.75,5,breathing_exercise,5,low,morning,,Try 4-7-8 breathing,5 minutes,True,8.0,Very helpful,v1.0,47
+fb_f20da934,2026-03-23T12:08:28.467456,user_002,restless,0.6,3,short_walk,3,medium,afternoon,,Walk around the block,10 minutes,False,,Too busy to walk,v1.0,47
+fb_c1899698,2026-03-23T12:08:28.468476,user_001,focused,0.85,4,deep_work,1,low,morning,,Continue current task,25 minutes,True,9.0,Great productivity,v1.0,47
